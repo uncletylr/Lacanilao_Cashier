@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,6 @@ namespace ItemNamespace
 {
     public class Item
     {
-
         protected string item_name;
         protected double item_price;
         protected int item_quantity;
@@ -20,7 +19,6 @@ namespace ItemNamespace
             this.item_price = price;
             this.item_quantity = quantity;
         }
-
 
         public double getTotalPrice()
         {
@@ -36,28 +34,19 @@ namespace ItemNamespace
         private double payment_amount;
         private double change;
 
-
         public DiscountedItem(string name, double price, int quantity, double discount)
             : base(name, price, quantity)
         {
-
             this.item_discount = discount * 0.01;
         }
 
-
         public double getDiscountedPrice()
         {
-
             double result = this.item_discount * this.item_price;
-
-
             double individualDiscountedPrice = this.item_price - result;
-
-
             this.discounted_price = individualDiscountedPrice * this.item_quantity;
             return this.discounted_price;
         }
-
 
         public double getChange(double payment)
         {
