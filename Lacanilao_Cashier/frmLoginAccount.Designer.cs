@@ -1,4 +1,4 @@
-﻿namespace Lacanilao_Cashie
+﻿namespace Lacanilao_Cashier
 {
     partial class frmLoginAccount
     {
