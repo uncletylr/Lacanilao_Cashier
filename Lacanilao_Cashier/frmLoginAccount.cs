@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +12,12 @@ namespace Lacanilao_Cashier
 {
     public partial class frmLoginAccount : Form
     {
-     
         private Cashier activeCashier = new Cashier("Jofers", "password123");
 
         public frmLoginAccount()
         {
             InitializeComponent();
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -27,7 +27,6 @@ namespace Lacanilao_Cashier
 
             if (activeCashier.validateLogin(inputUser, inputPass))
             {
-                // Cleaned up message box—no department reference!
                 MessageBox.Show($"Welcome back!\n\nName: {activeCashier.FullName}",
                                 "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
