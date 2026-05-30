@@ -1,4 +1,4 @@
-﻿using ItemNamespace;
+using ItemNamespace;
 using System;
 using System.Windows.Forms;
 
@@ -12,6 +12,9 @@ namespace Lacanilao_Cashier
         public Form1()
         {
             InitializeComponent();
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
+            this.btnProcessPayment.Click += new System.EventHandler(this.btnSubmitPayment_Click);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
         }
 
         public Form1(frmLoginAccount loginForm) : this()
