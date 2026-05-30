@@ -1,4 +1,4 @@
-﻿namespace Lacanilao_Cashier
+﻿namespace Lacanilao_Cashie
 {
     partial class Form1
     {
